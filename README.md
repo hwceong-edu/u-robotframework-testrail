@@ -1,17 +1,15 @@
 # RobotFramework Testrail
 
-[![Build Status](https://travis-ci.org/peterservice-rnd/robotframework-testrail.svg?branch=master)](https://travis-ci.org/peterservice-rnd/robotframework-testrail)
-
 Short Description
 ---
+Updated fork of [robotframework-testrail](https://github.com/peterservice-rnd/robotframework-testrail)
 
-[Robot Framework](http://www.robotframework.org) library, listener and pre-run modifier for working with TestRail.
 
 Installation
 ---
 
 ```
-pip install robotframework-testrail
+pip install -i https://test.pypi.org/simple/ u-robotframework-testrail
 ```
 
 Documentation

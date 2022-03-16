@@ -32,7 +32,7 @@ class TestRailAPIClient(object):
             _run_id_ - ID of the test run;\n
             _protocol_ - connecting protocol to TestRail server: http or https.
         """
-        self._url = '{protocol}://{server}/testrail/index.php?/api/v2/'.format(protocol=protocol, server=server)
+        self._url = '{protocol}://{server}/index.php?/api/v2/'.format(protocol=protocol, server=server)
         self._user = user
         self._password = password
         self.run_id = run_id
@@ -195,7 +195,7 @@ class TestRailAPIClient(object):
         *Returns:* \n
             Test status ID.
         """
-        last_case_result = self.get_results_for_case(run_id=run_id, case_id=case_id, limit=1)
+        last_case_result = self.get_results_for_case(run_id=run_id, case_id=case_id, limit=1)['results']
         return last_case_result[0]['status_id'] if last_case_result else None
 
     def get_project(self, project_id: Id) -> JsonDict:

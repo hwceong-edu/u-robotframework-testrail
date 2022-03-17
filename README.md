@@ -9,7 +9,7 @@ Installation
 ---
 
 ```
-pip install -i https://test.pypi.org/simple/ u-robotframework-testrail
+pip install u-robotframework-testrail
 ```
 
 Documentation

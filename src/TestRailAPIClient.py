@@ -129,7 +129,14 @@ class TestRailAPIClient(object):
         | Add Result For Case | run_id=321 | case_id=123| test_result={'status_id': 3, 'comment': 'This test is untested', 'defects': 'DEF-123'} |
         """
         uri = 'add_result_for_case/{run_id}/{case_id}'.format(run_id=run_id, case_id=case_id)
-        self._send_post(uri, test_result_fields)
+        filter_results_fields = {}
+        filter_results_fields['status_id'] = test_result_fields['status_id']
+        if test_result_fields['status_id'] == 5:
+            filter_results_fields['status_id'] = 4
+            self._send_post(uri, filter_results_fields)
+        else:
+            self._send_post(uri, test_result_fields)
+        
 
     def get_statuses(self) -> JsonList:
         """Get test statuses information from TestRail.

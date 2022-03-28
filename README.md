@@ -15,7 +15,7 @@ pip install u-robotframework-testrail
 Documentation
 ---
 
-See documentation on [GitHub](https://github.com/peterservice-rnd/robotframework-testrail/tree/master/docs).
+See documentation on [GitHub](https://github.com/peterservice-rnd/robotframework-testrail/tree/master/docs)
 
 Usage
 ---
